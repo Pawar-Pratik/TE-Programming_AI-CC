@@ -1,0 +1,36 @@
+The above code represents a chatbot for a college, named Bot. Here's a breakdown of the code:
+
+1. Global Variables:
+   - `exit`: Represents the exit condition for the chatbot.
+
+2. Function `chatbot_response(user_questions)`:
+   - This function handles the logic for generating responses to user questions.
+   - It takes the user's question as input and processes it.
+   - It uses different lists to store possible responses for different types of questions.
+   - It checks the user's question for specific keywords and provides appropriate responses.
+   - If the question matches a specific category, a random response from the respective list is selected and printed.
+   - If the question matches the exit condition, the exit counter is incremented and a goodbye message is printed.
+   - If the question doesn't match any specific category, an "I didn't understand your question" message is printed.
+   - After each response, a separator line is printed.
+
+3. Chatbot Greetings:
+   - The chatbot starts by printing a greeting message to the user.
+
+4. Main Loop:
+   - The code enters a while loop until the exit condition is met.
+   - Inside the loop, the user's input is captured using the `input()` function.
+   - If the user's input is not "bye", the `chatbot_response()` function is called with the user's input.
+   - If the user's input is "bye" or similar, the exit counter is incremented, and the loop will exit in the next iteration.
+
+Theory:
+- The chatbot uses lists to store possible responses for different types of questions, such as facilities, fees, timings, and clubs.
+- It checks the user's question for specific keywords related to these categories and provides a random response from the respective list.
+- If the user asks about facilities, it randomly selects a response from the FACILITIES list.
+- If the user asks about fees, it prints the first response from the FEES list.
+- If the user asks about timings, it randomly selects a response from the TIMINGS list.
+- If the user asks about clubs, it randomly selects a response from the CLUBS list.
+- If the user's question doesn't match any specific category, it prints an "I didn't understand your question" message.
+- The exit condition is checked if the user's question contains keywords like "bye," "goodbye," "cya," or "exit." If matched, the exit counter is incremented and a goodbye message is printed.
+- The chatbot continues to interact with the user until the exit condition is met.
+
+This code provides a basic structure for a chatbot that can handle specific questions related to facilities, fees, timings, and clubs in a college. However, it can be expanded and improved by adding more categories, refining the keyword matching, and enhancing the responses to provide more accurate and helpful information.

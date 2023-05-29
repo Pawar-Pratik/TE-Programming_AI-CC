@@ -1,0 +1,22 @@
+Greedy Search is a simple and intuitive algorithm used for solving optimization problems. It belongs to the family of heuristic search algorithms. Unlike traditional search algorithms, such as breadth-first search or depth-first search, which explore all possible paths, greedy search makes locally optimal choices at each step in the hope of finding a global optimum. It is not guaranteed to find the best solution, but it often provides an acceptable solution quickly.
+
+Here's a general outline of the Greedy Search algorithm:
+
+Define the problem: Determine the problem statement, the objective function, and any constraints.
+
+Initialize the solution: Start with an initial solution, which can be generated randomly or using domain-specific knowledge.
+
+Evaluate the neighbors: Generate all possible neighboring solutions by applying some local modifications to the current solution. These modifications can vary depending on the problem domain.
+
+Select the best neighbor: Evaluate the objective function for each neighbor and choose the neighbor that optimizes or improves the objective function the most.
+
+Update the current solution: Set the current solution to be the best neighbor found in the previous step.
+
+Repeat steps 3 to 5: Iterate the process by generating new neighbors from the updated solution and selecting the best one until a termination condition is met (e.g., reaching a maximum number of iterations or a specific solution quality).
+
+Return the best solution found.
+
+--------------------------------------------------------------------------------------------------------
+
+Greedy approach for job sequencing problem:
+Greedily choose the jobs with maximum profit first, by sorting the jobs in decreasing order of their profit. This would help to maximize the total profit as choosing the job with maximum profit for every time slot will eventually maximize the total profit

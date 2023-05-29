@@ -1,0 +1,28 @@
+(Code Explanation)
+The code provided implements a solution for the N-Queens problem using a recursive backtracking algorithm. Here's an explanation of each function used:
+
+1. `is_safe(board, row, col)`: This function checks whether it is safe to place a queen at a specific position `(row, col)` on the board. It iterates over the previous rows of the board and checks for any conflicts with the current position. It returns `False` if there is a queen in the same column, upper-left diagonal, or upper-right diagonal; otherwise, it returns `True`.
+
+2. `solve_n_queens_util(board, row, n, solutions)`: This is a recursive utility function that tries to solve the N-Queens problem. It takes the current state of the board, the current row being processed, the total number of rows/columns (`n`), and a list to store the solutions (`solutions`). It uses backtracking to explore all possible placements of queens on the board. When a valid solution is found (i.e., all queens are placed), it adds a copy of the board to the `solutions` list.
+
+3. `solve_n_queens(n)`: This is the main function that solves the N-Queens problem. It initializes an empty board of size `n` with all values set to -1. It also creates an empty list to store the solutions. It calls the `solve_n_queens_util` function to start the recursive solving process. Finally, it returns the list of solutions.
+
+The code then prompts the user to enter the number of queens (`n`), solves the N-Queens problem using the `solve_n_queens` function, and prints the number of solutions found. It also prints each solution, representing the board with "Q" for queens and "." for empty cells.
+
+
+(Theory)
+The N-Queen problem is a classical constraint satisfaction problem where the goal is to place N queens on an N×N chessboard in such a way that no two queens threaten each other. In other words, no two queens should share the same row, column, or diagonal.
+
+Here's a common algorithm to solve the N-Queen problem using backtracking:
+
+Start by placing the first queen in the first row and column.
+
+Move to the next row and try placing the next queen in each column of that row, checking if it violates any constraints.
+
+If placing a queen in a particular column of the current row doesn't violate any constraints, move to the next row and repeat step 2. If it violates constraints in all columns, backtrack to the previous row and try the next column.
+
+Repeat steps 2 and 3 until all queens are placed on the board or all possible configurations have been tried.
+
+When a valid solution is found (all queens are placed without threatening each other), it is added to the list of solutions.
+
+Continue the search for all possible solutions until all configurations have been tried.

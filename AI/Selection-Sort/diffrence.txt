@@ -1,0 +1,16 @@
+Selection sort and job scheduling are both examples of algorithms that utilize the greedy approach. However, they are used in different contexts and solve different problems.
+
+Selection Sort:
+- Selection sort is a sorting algorithm used to arrange a list of elements in ascending or descending order.
+- It works by repeatedly finding the minimum (or maximum) element from the unsorted part of the list and placing it at the beginning of the sorted portion.
+- The algorithm divides the input list into two parts: the sorted part and the unsorted part. Initially, the sorted part is empty, and the unsorted part contains all the elements.
+- Selection sort has a time complexity of O(n^2), where n is the number of elements in the list.
+
+Job Scheduling (Greedy Algorithm):
+- Job scheduling is a problem in which a set of jobs with associated deadlines and profits needs to be scheduled on a single resource with limited capacity.
+- The objective is to maximize the total profit obtained by completing the jobs within their respective deadlines.
+- The greedy algorithm for job scheduling works by sorting the jobs based on their profit in descending order.
+- It iterates through the sorted jobs and assigns each job to the earliest available time slot that does not violate its deadline.
+- Job scheduling with the greedy algorithm has a time complexity of O(n log n), where n is the number of jobs.
+
+In summary, selection sort is a sorting algorithm that arranges elements in a list, while job scheduling is a problem that involves assigning jobs to maximize profit within certain constraints. Both use the greedy approach, but they have different applications and objectives.

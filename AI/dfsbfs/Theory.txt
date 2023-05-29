@@ -1,0 +1,64 @@
+Theory :
+DFS :
+The depth-first search or DFS algorithm traverses or explores data structures, such as trees and graphs. The algorithm starts at the root node (in the case of a graph, you can use any random node as the root node) and examines each branch as far as possible before backtracking.
+
+BFS :
+BFS is a graph traversal approach in which you start at a source node and layer by layer through the graph, analyzing the nodes directly related to the source node. Then, in BFS traversal, you must move on to the next-level neighbor nodes.
+
+---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---
+
+Input : 
+Enter the number of nodes in the graph: 6
+Enter a node: 1
+Enter the number of Childs for node 1: 2
+Enter a neighbor: 2
+Enter a neighbor: 3
+Enter a node: 2
+Enter the number of Childs for node 2: 1
+Enter a neighbor: 4
+Enter a node: 3
+Enter the number of Childs for node 3: 2
+Enter a neighbor: 5
+Enter a neighbor: 6
+Enter a node: 4
+Enter the number of Childs for node 4: 0
+Enter a node: 5
+Enter the number of Childs for node 5: 0
+Enter a node: 6
+Enter the number of Childs for node 6: 0
+Enter the starting node: 1
+
+Output :
+BFS traversal:
+1 2 3 4 5 6
+DFS traversal:
+1 2 4 3 5 6
+
+---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---x---
+
+code Explanation:
+
+The provided Python code includes two functions, `bfs` and `dfs`, which perform breadth-first search (BFS) and depth-first search (DFS) traversals, respectively, on a graph. Here's a short logic explanation for each function:
+
+1. `bfs(graph, start)`: This function implements the breadth-first search traversal algorithm.
+
+   - Initialize an empty set called `visited` to keep track of visited nodes and a queue, initially containing the `start` node.
+   - Add the `start` node to the `visited` set.
+   - While the queue is not empty, repeat the following steps:
+     - Remove the first node from the queue and assign it to the variable `node`.
+     - Print the `node` value.
+     - Iterate over the neighbors of the `node` from the `graph` dictionary.
+     - If a neighbor is not present in the `visited` set, add it to the queue and the `visited` set.
+
+2. `dfs(graph, start)`: This function implements the depth-first search traversal algorithm.
+
+   - Initialize an empty set called `visited` to keep track of visited nodes and a stack, initially containing the `start` node.
+   - While the stack is not empty, repeat the following steps:
+     - Pop the top node from the stack and assign it to the variable `node`.
+     - If the `node` is not present in the `visited` set, proceed:
+       - Print the `node` value.
+       - Add the `node` to the `visited` set.
+       - Iterate over the reversed order of the neighbors of the `node` from the `graph` dictionary.
+       - If a neighbor is not present in the `visited` set, push it onto the stack.
+
+The main code section prompts the user to input the number of nodes in the graph, the nodes themselves, the number of neighbors for each node, and the starting node. It then calls the `bfs` and `dfs` functions with the provided graph and starting node to perform the respective traversals and print the node values.
